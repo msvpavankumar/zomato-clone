@@ -1,7 +1,8 @@
 const order = document.querySelector('.order');
 const items = document.querySelectorAll('.btn-primary');
 const addItems = document.querySelector('.btn-secondary');
-const selectedItems = [];
+let selectedItems = [];
+let statement = document.createElement('h2');
 
 // Items price
 const pizza = 10;
@@ -18,10 +19,17 @@ function allItems(e) {
     .substring(0, e.target.textContent.indexOf('-'))
     .trim()
     .toLowerCase();
-  selectedItems.push(item);
+  if (item !== '') {
+    selectedItems.push(item);
+  }
+  statement.innerHTML = '';
 }
 
 function totalPrice() {
+  statement.innerHTML = '';
+  if (selectedItems.length === 0) {
+    return;
+  }
   for (let i = 0; i < selectedItems.length; i++) {
     switch (selectedItems[i]) {
       case 'pizza':
@@ -44,11 +52,13 @@ function totalPrice() {
     }
   }
   // console.log(total);
-  const h2 = document.createElement('h2');
-  h2.className = 'final-heading';
-  h2.innerHTML = 'Your total order price is $' + total;
-  h2.style.paddingTop = '20px';
-  order.appendChild(h2);
+  statement.className = 'final-heading';
+  statement.innerHTML = 'Your total order price is $' + total;
+  statement.style.paddingTop = '20px';
+  order.appendChild(statement);
+
+  selectedItems = [];
+  total = 0;
 }
 
 // Events
