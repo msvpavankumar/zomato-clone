@@ -1,0 +1,226 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 15px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}
+
+img {
+  display: block;
+}
+
+/* Utilities */
+.container {
+  max-width: 1600px;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.main-heading {
+  font-size: 70px;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+.secondary-heading {
+  color: #666;
+  font-size: 35px;
+}
+
+.l-heading {
+  font-size: 45px;
+  font-weight: 100;
+  padding-bottom: 35px;
+}
+
+.final-heading {
+  font-size: 35px;
+}
+
+.btn {
+  display: inline-block;
+  color: #333;
+  background: #fff;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.py-1 {
+  padding: 10px 15px;
+}
+
+.btn:hover {
+  background: red;
+  color: white;
+}
+
+.light-bold {
+  font-weight: 550;
+  font-size: 18px;
+  color: #555;
+}
+
+.grp {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.btn-light {
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  width: 32%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  background: #9c7e6b;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: none;
+  width: 180px;
+}
+
+.btn-secondary {
+  background-color: blue;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #fff;
+}
+
+.navbar h4 {
+  font-size: 16px;
+}
+
+/* Main Header */
+#main-header .container {
+  flex-direction: column;
+  background: url('/img/home-bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  color: #fff;
+}
+
+#main-header .main-content {
+  margin-top: 8vh;
+}
+
+#main-header .main-content .btn {
+  letter-spacing: 2px;
+}
+
+/* Options */
+#options .container {
+  padding: 40px 175px;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+#options .card {
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#options .card h4 {
+  font-weight: 600;
+}
+
+#options .card img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 350px;
+  height: 175px;
+}
+
+/* Collections */
+#collections .container {
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 20px 200px;
+}
+
+#collections .container .btn-light .arrow-mark {
+  padding-top: 15px;
+}
+
+#collections .container .btn-special {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Order Food Page */
+.order {
+  width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.order img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 30px auto;
+}
